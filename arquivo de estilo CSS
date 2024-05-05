@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bcandys - Doces Deliciosos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo_bcandys.png" alt="Logo Bcandys">
+            <h1>Bcandys</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Delicie-se com nossos doces irresistíveis!</h2>
+        <a href="#" class="btn-cadastro">Cadastre-se</a>
+    </section>
+
+    <section class="produtos">
+        <h2>Nossos Doces</h2>
+        <div class="grid-fotos">
+            <img src="doce1.jpg" alt="Doce 1">
+            <img src="doce2.jpg" alt="Doce 2">
+            <img src="doce3.jpg" alt="Doce 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>Promoção por tempo limitado! Aproveite nossos descontos imperdíveis!</p>
+        <a href="#" class="btn-panfleto">Veja o panfleto</a>
+    </footer>
+</body>
+</html>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: pink;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.btn-cadastro {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.produtos {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.btn-panfleto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
