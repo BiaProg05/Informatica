@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Doceria da Beatriz, Bcandys</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Bem-vindo à Doceria da Beatriz, Bcandys, onde produzimos os mais deliciosos doces caseiros há mais de 10 anos.</p>
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li>Bolo de Chocolate - R$20,00</li>
+            <li>Cupcake de Morango - R$3,00</li>
+            <li>Brigadeiro - R$1,50 cada</li>
+            <li>Torta de Limão - R$25,00</li>
+        </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para fazer seu pedido ou esclarecer dúvidas:</p>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Email: contato@doceriadabeatriz.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Doceria da Beatriz. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+Css
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2dede;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #f2dede;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilos específicos para o conteúdo */
+h1, h2 {
+    color: #d9534f;
+}
+
+#menu ul {
+    list-style-type: none;
+}
+
+#menu ul li {
+    margin-bottom: 10px;
+}
+
+#menu ul li:before {
+    content: "• ";
+    color: #d9534f;
+}
+
+#contato p {
+    margin-bottom: 5px;
+}
