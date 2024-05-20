@@ -1,0 +1,209 @@
+
+
+INDEX.HTML
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces da Beatriz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="header">
+        <img src="src/logo.jpg" alt="Logo Doces da Beatriz" class="logo">
+        <h1>Bem-vinda ao Bcandys da Beatriz</h1>
+        <p>Os melhores doces caseiros da cidade!</p>
+        <a href="cadastro.html" class="button">Cadastro</a>
+    </div>
+    <div class="main-content">
+        <div class="content">
+            <h2>Nossos Doces</h2>
+            <p>Aqui na Doceria Bcandys da Beatriz, nós oferecemos uma variedade de doces deliciosos, incluindo:</p>
+            <ul class="doce-list">
+                <li>
+                    <img src="src/brigadeiro.jpg" alt="Brigadeiro">
+                    Brigadeiros
+                </li>
+                <li>
+                    <img src="src/beijinho.jpg" alt="Beijinho">
+                    Beijinhos
+                </li>
+                <li>
+                    <img src="src/bolo_de_pote.jpg" alt="Bolo de Pote">
+                    Bolos de pote
+                </li>
+                <li>
+                    <img src="src/torta_doce.jpg" alt="Torta Doce">
+                    Tortas doces
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar">
+            <img src="src/panfleto.jpg" alt="Panfleto Promocional" class="panfleto">
+        </div>
+    </div>
+    <div class="footer">
+        <p>Contato: (xx) xxxx-xxxx</p>
+        <p>Email: contato@docesdabeatriz.com.br</p>
+    </div>
+</body>
+</html>
+
+CADASTRO.HTML
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Doces da Beatriz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <div class="header">
+        <h1>Cadastro</h1>
+    </div>
+    <div class="content">
+        <h2>Cadastre-se para receber novidades e ofertas!</h2>
+        <form action="#" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone"><br>
+            <input type="submit" value="Cadastrar">
+        </form>
+    </div>
+    <div class="footer">
+        <p>Contato: (xx) xxxx-xxxx</p>
+        <p>Email: contato@docesdabeatriz.com.br</p>
+    </div>
+</body>
+</html>
+
+STYLES.CSS
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: #fff5f8; 
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header { 
+    background-color: #ffb6c1; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.header .logo {
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #800020;
+}
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #800020;
+}
+.header .button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #800020;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.header .button:hover {
+    background-color: #a02040;
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.content { 
+    flex: 1;
+    background: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.content h2 {
+    font-size: 2em;
+    color: #800020;
+    margin-bottom: 10px;
+}
+.content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.doce-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+}
+.doce-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    text-align: center;
+}
+.doce-list img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sidebar {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar .panfleto {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.footer { 
+    background-color: #d3d3d3; 
+    padding: 15px; 
+    text-align: center; 
+    width: 100%;
+}
+.footer p {
+    margin: 5px 0;
+    font-size: 1em;
+}
