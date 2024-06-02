@@ -1,0 +1,539 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doceria Bcandys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Adicione a logo aqui -->
+            <img src="./src/logo.jpg" alt="Logo da Doceria Bcandys">
+        </div>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem-vindo à Doceria Bcandys</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchDoces()" placeholder="Buscar doces...">
+        </div>
+        <table id="docesTable">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Doce</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="imagens/brigadeiro.jpg" alt="Brigadeiro"></td>
+                    <td>Brigadeiro</td>
+                    <td>Delicioso brigadeiro de chocolate.</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/beijinho.jpg" alt="Beijinho"></td>
+                    <td>Beijinho</td>
+                    <td>Beijinho de coco com cravo.</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/cajuzinho.jpg" alt="Cajuzinho"></td>
+                    <td>Cajuzinho</td>
+                    <td>Docinho de amendoim com chocolate.</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/olho-de-sogra.jpg" alt="Olho de Sogra"></td>
+                    <td>Olho de Sogra</td>
+                    <td>Docinho de coco com ameixa.</td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/bicho-de-pe.jpg" alt="Bicho de Pé"></td>
+                    <td>Bicho de Pé</td>
+                    <td>Brigadeiro rosa de morango.</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/quindim.jpg" alt="Quindim"></td>
+                    <td>Quindim</td>
+                    <td>Docinho de coco com gemas.</td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/pacoca.jpg" alt="Paçoca"></td>
+                    <td>Paçoca</td>
+                    <td>Doce de amendoim tradicional.</td>
+                    <td>R$ 1,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/pudim.jpg" alt="Pudim"></td>
+                    <td>Pudim</td>
+                    <td>Pudim de leite condensado.</td>
+                    <td>R$ 4,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/baba-de-moca.jpg" alt="Baba de Moça"></td>
+                    <td>Baba de Moça</td>
+                    <td>Doce de gemas e leite de coco.</td>
+                    <td>R$ 3,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/cocada.jpg" alt="Cocada"></td>
+                    <td>Cocada</td>
+                    <td>Doce de coco tradicional.</td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/brownie.jpg" alt="Brownie"></td>
+                    <td>Brownie</td>
+                    <td>Brownie de chocolate com nozes.</td>
+                    <td>R$ 5,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/bolo-de-rolo.jpg" alt="Bolo de Rolo"></td>
+                    <td>Bolo de Rolo</td>
+                    <td>Bolo fino enrolado com goiabada.</td>
+                    <td>R$ 4,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/sonho.jpg" alt="Sonho"></td>
+                    <td>Sonho</td>
+                    <td>Massa doce frita recheada.</td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/canudo-de-doce-de-leite.jpg" alt="Canudo de Doce de Leite"></td>
+                    <td>Canudo de Doce de Leite</td>
+                    <td>Canudo crocante com doce de leite.</td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/torta-de-limao.jpg" alt="Torta de Limão"></td>
+                    <td>Torta de Limão</td>
+                    <td>Torta de limão com merengue.</td>
+                    <td>R$ 4,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/mousse-de-maracuja.jpg" alt="Mousse de Maracujá"></td>
+                    <td>Mousse de Maracujá</td>
+                    <td>Mousse cremoso de maracujá.</td>
+                    <td>R$ 3,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/merengue.jpg" alt="Merengue"></td>
+                    <td>Merengue</td>
+                    <td>Suspiro recheado com chantilly.</td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/trufa.jpg" alt="Trufa"></td>
+                    <td>Trufa</td>
+                    <td>Trufa de chocolate com diversos sabores.</td>
+                    <td>R$ 3,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/pave.jpg" alt="Pavê"></td>
+                    <td>Pavê</td>
+                    <td>Pavê de chocolate e biscoito.</td>
+                    <td>R$ 4,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/romeu-e-julieta.jpg" alt="Romeu e Julieta"></td>
+                    <td>Romeu e Julieta</td>
+                    <td>Doce de goiabada com queijo.</td>
+                    <td>R$ 2,50</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/quindao.jpg" alt="Quindão"></td>
+                    <td>Quindão</td>
+                    <td>Grande quindim de coco.</td>
+                    <td>R$ 4,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/bombom.jpg" alt="Bombom"></td>
+                    <td>Bombom</td>
+                    <td>Bombom recheado com diversos sabores.</td>
+                    <td>R$ 2,00</td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/torrone.jpg" alt="Torrone"></td>
+                    <td>Torrone</td>
+                    <td>Doce de mel, açúcar e clara de ovo com amêndoas.</td>
+                    <td>R$ 3,50</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Doceria Bcandys. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+ cadastro.html
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Doceria Bcandys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./src/logo.jpg" alt="Logo da Doceria Bcandys">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastro de Clientes</h1>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required><br><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Doceria Bcandys. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+sobre.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Doceria Bcandys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./src/logo.jpg" alt="Logo da Doceria Bcandys">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Sobre a Doceria Bcandys</h1>
+        <p>A Doceria Bcandys foi fundada com o objetivo de proporcionar momentos doces e felizes para todos os nossos clientes. Nosso foco é oferecer doces de alta qualidade feitos com ingredientes selecionados.</p>
+
+        <h1>Missão</h1>
+        <p>Assegurar a qualidade e a satisfação do cliente.</p>
+
+        <h1>Valores</h1>
+        <p>Manter o respeito,equidade e a acessibilidade.</p>
+        
+        <h1>Visão</h1>
+        <p>Revitalizar o mercado com o apoio e admiração do nosso público/ cliente/consumidor</p>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Doceria Bcandys. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos - Doceria Bcandys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./src/logo.jpg" alt="Logo da Doceria Bcandys">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contatos</h1>
+        <p>Email: contato@doceriabcandys.com</p>
+        <p>Telefone: (11) 1234-5678</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Doceria Bcandys. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+ contatos.html
+
+ localização.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localização - Doceria Bcandys</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./src/logo.jpg" alt="Logo da Doceria Bcandys">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Localização</h1>
+        <p>Endereço: Rua Fictícia, 123, Bairro Doce, Cidade Doce, Estado Doce</p>
+        <p>Veja o mapa abaixo para a nossa localização:</p>
+        <!-- Adicione um mapa integrado aqui se desejar -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Doceria Bcandys. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
+ styles.css
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcccb;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+nav .menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #d2691e;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 600px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8b400;
+    color: white;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+}
+
+footer {
+    background-color: #ffcccb;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav .menu-icon {
+        display: block;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        display: none;
+        width: 100%;
+        background-color: #ffcccb;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    td img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        font-size: 12px;
+    }
+
+    td img {
+        width: 60px;
+    }
+}
+
+script.js
+ function searchDoces() {
+    // Declarações de variáveis
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("docesTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop em todas as linhas da tabela e oculta as que não correspondem à consulta de pesquisa
+    for (i = 1; i < tr.length; i++) { // Começa de 1 para pular o cabeçalho
+        tr[i].style.display = "none"; // Esconde a linha inicialmente
+
+        td = tr[i].getElementsByTagName("td");
+        for (var j = 0; j < td.length; j++) {
+            if (td[j]) {
+                txtValue = td[j].textContent || td[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = ""; // Mostra a linha se a busca corresponder
+                    break; // Para de checar outras células na linha
+                }
+            }
+        }
+    }
+}
+
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
