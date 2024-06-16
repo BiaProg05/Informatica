@@ -1,0 +1,47 @@
+
+questão 1
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Números de 1 a 100</title>
+</head>
+<body>
+    <div id="numbers"></div>
+
+    <script>
+        const numbersDiv = document.getElementById('numbers');
+        let numbersHTML = '';
+
+        for (let i = 1; i <= 100; i++) {
+            numbersHTML += i + '<br>';
+        }
+
+        numbersDiv.innerHTML = numbersHTML;
+    </script>
+</body>
+</html>
+
+
+questão 2
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mostrar Números Ímpares de 100 a 200</title>
+</head>
+<body>
+    <div id="odd-numbers"></div>
+
+    <script>
+        const oddNumbersDiv = document.getElementById('odd-numbers');
+        let numbersHTML = '';
+
+        for (let i = 101; i <= 200; i += 2) {
+            numbersHTML += i + '<br>';
+        }
+
+        oddNumbersDiv.innerHTML = numbersHTML;
+    </script>
+</body>
+</html>
