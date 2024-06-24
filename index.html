@@ -1,37 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doces da Beatriz</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .header { background-color: pink; padding: 10px; text-align: center; }
-        .content { margin: 15px; }
-        .footer { background-color: lightgray; padding: 10px; text-align: center; }
-    </style>
+    <title>Doceria Bcandys</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>Bem-vinda ao Bcandys da Beatriz</h1>
-        <p>Os melhores doces caseiros da cidade!</p>
-    </div>
-    <div class="content">
-        <h2>Nossos Doces</h2>
-        <p>Aqui na Doceria Bcandys da Beatriz, nós oferecemos uma variedade de doces deliciosos, incluindo:</p>
-        <ul>
-            <li>Brigadeiros</li>
-            <li>Beijinhos</li>
-            <li>Bolos de pote</li>
-            <li>Tortas doces</li>
-            <li>Doces personalizados</li>
-            <li>Doces sazonais</li>
-            
-        </ul>
-    </div>
-    <div class="footer">
-        <p>Contato: (xx) xxxx-xxxx</p>
-        <p>Email: contato@docesdabeatriz.com.br</p>
-    </div>
+    <header>
+        <div class="logo">
+            <img src="./src/logo.jpg" alt="Logo da Doceria Bcandys">
+        </div>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
+                <li><a href="localizacao.html">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem-vindo à Doceria Bcandys</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="searchDoces()" placeholder="Buscar doces...">
+        </div>
+        <table id="docesTable">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Doce</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Adicionar coluna para botões de adicionar ao carrinho -->
+                <tr>
+                    <td><img src="imagens/brigadeiro.jpg" alt="Brigadeiro"></td>
+                    <td>Brigadeiro</td>
+                    <td>Delicioso brigadeiro de chocolate.</td>
+                    <td>R$ 2,00</td>
+                    <td><button onclick="addToCart('Brigadeiro', 2.00)">Adicionar</button></td>
+                </tr>
+                <tr>
+                    <td><img src="imagens/beijinho.jpg" alt="Beijinho"></td>
+                    <td>Beijinho</td>
+                    <td>Beijinho de coco com cravo.</td>
+                    <td>R$ 2,00</td>
+                    <td><button onclick="addToCart('Beijinho', 2.00)">Adicionar</button></td>
+                </tr>
+                <!-- Continue adicionando os produtos com botões de adicionar -->
+            </tbody>
+        </table>
+        <h2>Carrinho de Compras</h2>
+        <div id="cart">
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Itens do carrinho serão adicionados aqui -->
+                </tbody>
+            </table>
+            <h3>Total do Carrinho: R$ <span id="cartTotal">0.00</span></h3>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Doceria Bcandys. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
